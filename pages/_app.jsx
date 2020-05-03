@@ -1,6 +1,7 @@
 // relative path is not needed because we have added alias in next.config.js
 import Header from "components/Header";
 import { ThemeProvider } from "emotion-theming";
+import { GlobalStyles } from "components/GlobalStyles/";
 
 const theme = {
   colors: {
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <GlobalStyles />
         <Header />
         <Component {...pageProps} />
       </ThemeProvider>

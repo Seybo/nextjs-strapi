@@ -1,3 +1,9 @@
+import styled from "@emotion/styled";
+
 export default function Header() {
-  return <p>Header</p>;
+  return <HeaderStyled>Header</HeaderStyled>;
 }
+
+const HeaderStyled = styled.header`
+  background: ${(props) => props.theme.colors.primary};
+`;
