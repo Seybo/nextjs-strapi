@@ -1,11 +1,20 @@
 // relative path is not needed because we have added alias in next.config.js
-import Header from 'components/Header'
+import Header from "components/Header";
+import { ThemeProvider } from "emotion-theming";
+
+const theme = {
+  colors: {
+    primary: "#ff0000",
+  },
+};
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Header />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Header />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
