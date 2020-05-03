@@ -1,4 +1,5 @@
-import Header from '../components/Header'
+// relative path is not needed because we have added alias in next.config.js
+import Header from 'components/Header'
 
 function MyApp({ Component, pageProps }) {
   return (
