@@ -9,6 +9,7 @@ globals:
   Atomics: readonly
   SharedArrayBuffer: readonly
   React: writable
+  process: readonly
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -19,5 +20,6 @@ plugins:
 rules: {
   react/prop-types: 0,
   react/react-in-jsx-scope: "off",
-  quotes: [2, "double", "avoid-escape"]
+  quotes: [2, "double", "avoid-escape"],
+  no-unused-vars: ["error", { "argsIgnorePattern": "^_" }]
 }
