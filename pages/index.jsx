@@ -1,10 +1,11 @@
 import axios from "axios";
+import Card from "components/Card";
 
 export default function Home({ movies }) {
   return (
     <div className="container">
       {movies.map((movie) => {
-        return <div key={movie.id}>{movie.title}</div>;
+        return <Card key={movie.id} movie={movie} />;
       })}
     </div>
   );
